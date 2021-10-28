@@ -1,0 +1,67 @@
+{"intents": [
+        {"tag": [" ", "AI aktivieren, Thema erkennen,"],
+         "patterns": ["ist ein kleineres Unternehmen sicherer gegen Hackerangriffe?", "warum werden kleinere Unternehmen oft gehackt?", "werden kleinere Unternehmen gehackt?"],
+         "responses": ["Hallo,\ndie grunds\u00e4tzliche Frage ist ja immer, was bedeutet \"klein\"?\nEntgegen der Annahme vieler Unternehmer wei\u00df ein Hacker in der Regel nicht wen er angreift.\nEs sind in der Regel Zufallstreffer, weil man von einem Scanner entdeckt oder ein falscher Klick in einer Mail gemacht wird.\nDarf ich Ihnen hier ein Beispiel zeigen?"],
+         "context_set": ["B8", "B9"],
+         "link": [""],
+         "task": ["nothing"]
+        },
+        {"tag": ["B8"],
+         "patterns": ["Ja"],
+         "responses": ["Hier sehen Sie eine Webseite der deutschen Telekom auf der ersichtlich ist, \nwieviele Angriffe im Moment stattfinden.\nSie k\u00f6nnen links oben lesen, wieviele Anrgiffe im Moment in der Minute stattfinden.\nDies macht kein Hacker mehr manuell, sondern automatisiert. \nDarum werden auch viele kleine Unternehmen gehackt.\nM\u00f6chten Sie noch mehr erfahren?"],
+         "context_set": ["B13", "B14"],
+         "link": ["www.Sicherheitstacho.eu"],
+         "task": ["open"]
+        },
+        {"tag": ["B9"],
+         "patterns": ["Nein"],
+         "responses": ["thank"],
+         "context_set": ["END"],
+         "link": [""],
+         "task": ["nothing"]
+        },
+        {"tag": ["B13"],
+         "patterns": ["Ja"],
+         "responses": ["Ein Hacker ist vergleichbar mit einem analogen Einbrecher, nur dass der Hacker \ndigital unterwegs ist.\nSo wie der analoge Einbrecher findet der digitale online ein Unternehmen, aber er wei\u00df in der Regel nicht, was es f\u00fcr ein unternehmen ist, da er nur ein Scanergebnis in Form einer IP-Adresse sieht.\nDas bedeutet, dass der Hacker erst einmal in das Unternehmen eindringt und sich dann dort umschaut. Dann werden alle Daten gestohlen und ein Verschl\u00fcsselungstrojaner installiert.\nStatistisch gesehen haben kleine Unternehmen einen gr\u00f6\u00dferen Schaden als Gro\u00dfunternehmen, da die Hacker bei kleinen Unternehmen nicht vorsichtigt sind.\nAls Unternehmer bleibt man dann zur\u00fcck und muss den Schaden beseitigen und sich enthaften und entlasten.\nIst Ihnen bewusst, dass Sie bei einem Datendiebstahl mit Ihrem gesamten privaten Verm\u00f6gen haften? Auch wenn Sie z.B. eine GmbH haben?"],
+         "context_set": ["B18", "B20"],
+         "link": ["www.Sicherheitstacho.eu"],
+         "task": ["close"]
+        },
+        {"tag": ["B14"],
+         "patterns": ["Nein"],
+         "responses": [" "],
+         "context_set": ["END"],
+         "link": ["www.Sicherheitstacho.eu"],
+         "task": ["close"]
+        },
+        {"tag": ["B18"],
+         "patterns": ["Ja", "Nein"],
+         "responses": ["Wollen Sie bewusst mit Ihrem gesamten Verm\u00f6gen daf\u00fcr haften, dass eventuell \njemand im Unternehmen einen falschen Klick macht oder Sie auf den scannern auftauchen?"],
+         "context_set": ["B24", "B25"],
+         "link": [""],
+         "task": ["nothing"]
+        },
+        {"tag": ["B20"],
+         "patterns": ["Warum hafte ich mit meinem Verm\u00f6gen?"],
+         "responses": ["Aufgrund der DSGVO, hat jeder Betroffene nach einem Cyberangriff mit\nDatendiebstahl die M\u00f6glichkeit, Anspr\u00fcche direkt an Sie pers\u00f6nlich geltend zu machen.\nAus prozessualer Sicht m\u00fcssen Sie dann den Nachweis erbringen, dass Sie keinster Weise den Umstand zu verantworten haben, durch den der Schaden entstanden ist.\nK\u00f6nnen Sie das nicht, dann besteht die Gefahr, dass Sie vollumf\u00e4nglich privat haften. Sie haben hierbei auch die sogenannte Beweislastumkehr und m\u00fcssen den Nachweis erbringen, dazu gibt es bereits Urteile.",
+                "Wollen Sie bewusst mit Ihrem gesamten Vermögen dafür haften, dass eventuell \njemand im Unternehmen einen falschen Klick macht oder Sie auf den scannern auftauchen?"],
+         "context_set": ["END"],
+         "link": [""],
+         "task": ["nothing"]
+        },
+        {"tag": ["B24"],
+         "patterns": ["Ja"],
+         "responses": ["Das ist Ihre kaufm\u00e4nnische Entscheidung, als Berater muss dies dokumentiert \nwerden, sollte es nach einem Hackerangriff zu einer Insolvenz kommen, so muss ggfs. das Protokoll dieses Gespr\u00e4ch \u00fcbergeben werden.\nIch darf mich nun erst einmal verabschieden."],
+         "context_set": ["END"],
+         "link": [""],
+         "task": ["nothing"]
+        },
+        {"tag": ["B25"],
+         "patterns": ["Nein"],
+         "responses": ["Ich kann das verstehen, dass w\u00fcrde ich auch nicht wollen, genau deshalb gibt es\ndie M\u00f6glichkeit die Risiken auf eine Versicherung zu \u00fcbertragen. \nDas ist eine sehr gute Entscheidung, ich darf mich nun erst einmal verabschieden."],
+         "context_set": ["END"],
+         "link": [""],
+         "task": ["nothing"]
+        }
+    ]
+}
